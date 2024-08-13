@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+    @apply mb-3;
+  }
+  h3 {
+    @apply text-2xl;
+    @apply my-2;
+  }
+  h4 {
+    @apply text-xl;
+    @apply my-2;
+  }
+  h5 {
+    @apply text-base
+  }
+  p {
+    @apply my-3;
+  }
+  hr {
+    @apply pt-2;
+    @apply pb-4;
+  }
+  a:hover{
+    @apply text-slate-500;
+    @apply duration-700;
+  }
+}
+
+@layer utilities {
+  .content-container {
+    @apply mx-5;
+    @apply md:mx-14;
+    @apply lg:mx-0;
+    @apply lg:w-3/4;
+    @apply lg:mx-auto;
+    @apply py-10
+    /* @apply lg:px-20; */
+  }
+
+  .img-class {
+    @apply w-full;
+    @apply overflow-hidden;
+    @apply flex;
+    @apply justify-end;
+    @apply object-cover;
+    @apply h-96;
+  }
+}
